@@ -55,7 +55,7 @@ class BasePage:
         """
         return self._driver.find_elements(by, locator)
 
-    def wait_element(self, method, time=5):
+    def wait_element(self, method, time=10):
         """
         封装元素可点击的显式等待方法以便调用
         :param method: 方法名
