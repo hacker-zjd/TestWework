@@ -1,19 +1,20 @@
-print('\n'.join([''.join([('loveNana'[(x-y) % 8]if((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3 <= 0 else' ')
+print('\n'.join([''.join([('loveNana'[(x - y) % 8] if ((x * 0.05) ** 2 + (y * 0.1) ** 2 - 1) ** 3 - (x * 0.05) ** 2 * (
+        y * 0.1) ** 3 <= 0 else ' ')
                           for x in range(-30, 30)])
                  for y in range(15, -15, -1)]))
 print('end')
 
 import numpy as np
 import matplotlib.pyplot as plt
+from turtle import *
+
 x = np.linspace(-8, 8, 1024)
-y1 = 0.618*np.abs(x) - 0.8 * np.sqrt(64-x**2)  # 左部分
-y2 = 0.618*np.abs(x) + 0.8 * np.sqrt(64-x**2)  # 右部分
+y1 = 0.618 * np.abs(x) - 0.8 * np.sqrt(64 - x ** 2)  # 左部分
+y2 = 0.618 * np.abs(x) + 0.8 * np.sqrt(64 - x ** 2)  # 右部分
 plt.plot(x, y1, color='r')
 plt.plot(x, y2, color='r')
 plt.show()
 print('end')
-
-from turtle import *
 
 # 初始设置
 setup(750, 500)
@@ -76,10 +77,10 @@ done()
 print('end')
 
 # coding:utf-8
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
-from matplotlib.ticker import LinearLocator, FormatStrFormatter
-import matplotlib.pyplot as plt
+# from mpl_toolkits.mplot3d import Axes3D
+# from matplotlib import cm
+# from matplotlib.ticker import LinearLocator, FormatStrFormatter
+# import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -129,4 +130,3 @@ def plot_implicit(fn, bbox=(-1.5, 1.5)):
 # 主函数
 if __name__ == '__main__':
     plot_implicit(heart_3d)
-
