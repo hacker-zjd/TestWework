@@ -34,7 +34,7 @@ class BasePage:
                 executable_path="C:\Program Files\Google\Chrome\Application\chromedriver.exe", options=options)
         else:
             self._driver = driver
-        self._driver.implicitly_wait(5)
+        self._driver.implicitly_wait(15)
         if self._base_page != "":
             self._driver.get(self._base_page)
 

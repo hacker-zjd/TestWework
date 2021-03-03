@@ -1,12 +1,15 @@
+# coding:utf-8
+from turtle import *
+from turtledemo.clock import setup
+
+import matplotlib.pyplot as plt
+import numpy as np
+
 print('\n'.join([''.join([('loveNana'[(x - y) % 8] if ((x * 0.05) ** 2 + (y * 0.1) ** 2 - 1) ** 3 - (x * 0.05) ** 2 * (
         y * 0.1) ** 3 <= 0 else ' ')
                           for x in range(-30, 30)])
                  for y in range(15, -15, -1)]))
 print('end')
-
-import numpy as np
-import matplotlib.pyplot as plt
-from turtle import *
 
 x = np.linspace(-8, 8, 1024)
 y1 = 0.618 * np.abs(x) - 0.8 * np.sqrt(64 - x ** 2)  # 左部分
@@ -75,13 +78,6 @@ seth(150)
 fd(60)
 done()
 print('end')
-
-# coding:utf-8
-# from mpl_toolkits.mplot3d import Axes3D
-# from matplotlib import cm
-# from matplotlib.ticker import LinearLocator, FormatStrFormatter
-# import matplotlib.pyplot as plt
-import numpy as np
 
 
 # 绘制3D桃心
